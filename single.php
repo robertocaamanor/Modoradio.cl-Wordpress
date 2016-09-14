@@ -5,7 +5,10 @@
 	<?php if (have_posts()) : while ( have_posts()) : the_post(); ?>
 		<article>
 			<div class="thumb">
-				<?php if(has_post_thumbnail()) { the_post_thumbnail('single-thumbs'); } ?>
+				<?php if(has_post_thumbnail()) { the_post_thumbnail('single-thumbs', array(
+    'alt' => 'Responsive image',
+    'class' => 'img-responsive'
+)); } ?>
 			</div>
 			<hgroup>
 				<span class="categoria"><?php the_category(); ?></span>
