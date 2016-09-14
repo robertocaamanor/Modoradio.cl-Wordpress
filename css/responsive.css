@@ -69,6 +69,11 @@
 		margin-bottom: 40px;
 		width: 100%;
 	}
+
+	.image-resized img {
+        width:100%;
+        height:auto;
+    }
 }
 
 /* Medida para smartphones */

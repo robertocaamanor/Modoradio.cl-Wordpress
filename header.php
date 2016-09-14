@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Modoradio</title>
+	<meta http-equiv=”Content-Type” content=”<?php bloginfo(‘html_type’); ?>; charset=<?php bloginfo(‘charset’); ?>” />
+	<title><?php wp_title(""); ?><?php if(wp_title("", false)) { echo ' |'; } ?> Modoradio</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/bootstrap.min.css">
@@ -24,15 +25,26 @@
 	<header>
 		<div class="container">			
 			<div id="logo">
-				<img src="http://i.imgur.com/SSEAqum.png" alt="">
-			</div>			
-			<nav>
-				<?php wp_nav_menu(
-					array(
-						'container' => false,
-						'items_wrap' => '<ul id="menu-top">%3$s</ul>',
-						'theme_location' => 'menu'
-					)); ?>
-			</nav>			
+				<a href="<?php echo get_option('home'); ?>"/><img src="http://i.imgur.com/SSEAqum.png" alt=""></a>
+			</div>
+
+			<div class="boton-hamburguesa">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                <span class="glyphicon glyphicon-menu-hamburger"></span>
+	            </button>
+			</div>
+		    
+		    <div class="contenido-boton">
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<nav>
+						<?php wp_nav_menu(
+							array(
+								'container' => false,
+								'items_wrap' => '<ul id="menu-top">%3$s</ul>',
+								'theme_location' => 'menu'
+							)); ?>
+					</nav>	
+				</div><!-- /.navbar-collapse -->			    	
+		    </div>			
 		</div>
 	</header>

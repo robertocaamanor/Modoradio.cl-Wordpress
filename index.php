@@ -11,8 +11,9 @@
 				</a>
 			</div>
 			<hgroup>
+				<div class="categoria"><?php the_category(); ?></div>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<div class="date"><?php the_date(); ?> en <span><?php the_category(); ?></span></div>
+				<div class="date"><?php the_date(); ?></div>
 				<div class="extract"><?php the_excerpt(); ?></div>
 			</hgroup>
 		</article>

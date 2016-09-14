@@ -24,4 +24,18 @@ register_sidebar(array(
 	'after_title' => '</h3>'
 	));
 
+// Imagenes responsive automaticos
+function responsive_images($atts, $content = null) {
+     return '<div class="image-resized">' . $content .'</div>';
+}
+ 
+add_shortcode('responsive', 'responsive_images');
+
+// Videos responsive autómaticos
+function activate_jquery() {
+	
+        wp_enqueue_script( 'jquery');
+}
+
+add_action( 'wp_enqueue_scripts', 'activate_jquery' );
  ?>

@@ -6,6 +6,13 @@
 </footer>
 <script src="<?php bloginfo('template_url') ?>/js/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/bootstrap.min.js"></script>
+<script>
+   jQuery(document).ready(function(){
+
+	jQuery('iframe').wrap("<div class='iframe-flexible-container'></div>");
+
+   });
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

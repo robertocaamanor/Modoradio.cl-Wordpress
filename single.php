@@ -8,9 +8,11 @@
 				<?php if(has_post_thumbnail()) { the_post_thumbnail('single-thumbs'); } ?>
 			</div>
 			<hgroup>
+				<span class="categoria"><?php the_category(); ?></span>
 				<h2><?php the_title(); ?></h2>
-				<div class="date"><?php the_date(); ?> en <span><?php the_category(); ?></span></div>
+				<div class="date"><?php the_date(); ?></div>
 				<div class="extract"><?php the_content(); ?></div>
+				<div class="tags"><?php the_tags( ' ', ' ', '<br />' ); ?> </div>
 			</hgroup>
 		</article>
 		<?php endwhile; else: ?>
